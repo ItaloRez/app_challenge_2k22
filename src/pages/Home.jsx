@@ -100,6 +100,8 @@ export default function Home() {
                     <span>Ver todos</span>
                 </div>
 
+                <button onClick={getInfos}>Buscar</button>
+
 
                 {
 
