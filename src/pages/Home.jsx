@@ -48,8 +48,9 @@ export default function Home() {
 
     const getGeo = async (lat, lon) => {
         const res = await getCity(lat, lon);
-        console.log(res)
-        getPlanos(res.state);
+        console.log("Resposta google: ", res);
+        if (res) getPlanos(res.state);
+        else getPlanos()
     }
 
     const getPlanos = (state) => {
