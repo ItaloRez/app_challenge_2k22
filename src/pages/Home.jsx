@@ -47,10 +47,15 @@ export default function Home() {
     }
 
     const getGeo = async (lat, lon) => {
-        const res = await getCity(lat, lon);
-        console.log("Resposta google: ", res);
-        if (res) getPlanos(res.state);
-        else getPlanos()
+        try {
+            const res = await getCity(lat, lon);
+            console.log("Resposta google: ", res);
+            getPlanos(res.state);
+        } catch (e) {
+            console.log(e);
+            getPlanos('');
+        }
+
     }
 
     const getPlanos = (state) => {
