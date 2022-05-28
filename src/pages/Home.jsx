@@ -115,11 +115,7 @@ export default function Home() {
                     <span>Ver todos</span>
                 </div>
 
-                <button onClick={getInfos}>Buscar</button>
-
-
                 {
-
                     carregando
                         ?
                         <Box sx={{ display: 'flex', width: '100%', justifyContent: 'center' }}>
