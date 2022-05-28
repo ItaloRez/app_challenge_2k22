@@ -33,9 +33,16 @@ export default function Home() {
     const getInfos = async (lat, lon) => {
 
         if ("geolocation" in navigator) {
-            navigator.geolocation.getCurrentPosition(function (position) {
-                getInfos(position.coords.latitude, position.coords.longitude);
-            });
+
+            try {
+
+                navigator.geolocation.getCurrentPosition(function (position) {
+                    getInfos(position.coords.latitude, position.coords.longitude);
+                    console.log(position.coords.latitude, position.coords.long);
+                });
+            } catch (e) {
+                console.log(e);
+            }
         }
 
         const res = await getCity(lat, lon);
