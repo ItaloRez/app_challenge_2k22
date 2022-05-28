@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Routes } from 'react-router-dom';
+import EscolherEndereco from './pages/EscolherEndereco';
+import Home from './pages/Home';
+import Orcamento from './pages/Orcamento';
+import Pedido from './pages/Pedido';
+import Splash from './pages/Splash';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Splash />} />
+      <Route path="home" element={<Home />} />
+      <Route path="pedido" element={<Pedido />} />
+      <Route path="orcamento" element={<Orcamento />} />
+      <Route path="escolherEndereco" element={<EscolherEndereco />} />
+    </Routes>
   );
 }
 

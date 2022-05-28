@@ -1,0 +1,75 @@
+.container {
+    padding: 30px 20px 10px 20px;
+    background: #F1F5F4;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+    font-family: 'Inter';
+    font-style: normal;
+
+    .box {
+
+        display: flex;
+        align-items: center;
+
+        margin-bottom: 16px;
+
+        .content {
+
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            span:first-of-type {
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+
+                color: #000000;
+            }
+
+            span:last-of-type {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 29px;
+                color: #000000;
+            }
+        }
+
+        .button {
+            margin-left: auto;
+
+            button {
+                border: none;
+                padding: 8px 24px;
+                background: #5CC6BA;
+                border-radius: 100px;
+
+                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 19px;
+
+                color: #FFFFFF;
+            }
+        }
+    }
+
+    .footer {
+        margin-top: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        div {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+
+            color: #000000;
+        }
+    }
+}
