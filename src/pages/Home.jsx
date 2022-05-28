@@ -37,8 +37,8 @@ export default function Home() {
             try {
 
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    getInfos(position.coords.latitude, position.coords.longitude);
-                    console.log(position.coords.latitude, position.coords.long);
+                    //getInfos(position.coords.latitude, position.coords.longitude);
+                    console.log(position);
                 });
             } catch (e) {
                 console.log(e);
