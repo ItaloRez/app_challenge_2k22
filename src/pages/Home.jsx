@@ -30,21 +30,23 @@ export default function Home() {
         }
     }, [])
 
-    const getInfos = async (lat, lon) => {
+    const getInfos = async () => {
 
         if ("geolocation" in navigator) {
 
             try {
 
                 navigator.geolocation.getCurrentPosition(function (position) {
-                    //getInfos(position.coords.latitude, position.coords.longitude);
-                    console.log(position);
+                    getGeo(position.coords.latitude, position.coords.longitude);
+                    console.log(position.coords.latitude, position.coords.longitude);
                 });
             } catch (e) {
                 console.log(e);
             }
         }
+    }
 
+    const getGeo = async (lat, lon) => {
         const res = await getCity(lat, lon);
         console.log(res)
         getPlanos(res.state);
