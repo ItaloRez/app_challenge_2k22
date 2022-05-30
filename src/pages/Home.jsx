@@ -9,9 +9,12 @@ import { CircularProgress } from '@mui/material';
 
 import { Button, Dialog, DialogActions, DialogContent, DialogContentText, DialogTitle } from '@mui/material';
 
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
+
+    let navigate = useNavigate();
 
     const [planos, setPlanos] = useState([]);
     const [carregando, setCarregando] = useState(true);
@@ -87,7 +90,7 @@ export default function Home() {
                 <div className={styles.title}>
                     <img src="assets/avatar.png" alt="avatar" />
                     <span>Bem-Vindo</span>
-                    <img src="assets/bell.svg" alt="bell" />
+                    <img src="assets/bell.svg" alt="bell" onClick={() => navigate('/verTodos')} />
                 </div>
 
                 <div className={styles.badge}>
@@ -105,14 +108,13 @@ export default function Home() {
                         Faça o pedido do orçamento para a sua residência.
                     </span>
 
-                    <button>
+                    <button onClick={() => navigate('/escolherEndereco')}>
                         Pedir
                     </button>
                 </div>
-
                 <div className={styles.headerPlanos}>
                     <span>Planos já registrados</span>
-                    <span>Ver todos</span>
+                    <span onClick={() => navigate('/verTodos')}>Ver todos</span>
                 </div>
 
                 {

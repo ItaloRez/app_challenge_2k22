@@ -12,7 +12,7 @@ export default function EscolherEndereco() {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <IconButton aria-label="back">
+                <IconButton aria-label="back" onClick={() => navigate('/home')}>
                     <ArrowBackIcon sx={{ color: 'white' }} fontSize="large" />
                 </IconButton>
 
@@ -21,8 +21,8 @@ export default function EscolherEndereco() {
 
             </div>
             <div className={styles.buttons}>
-                <button onClick={() => navigate('/orcamento')}>Localidade Atual</button>
-                <button>Cadastrar Novo Endereço</button>
+                <button onClick={() => navigate('/escolherVelocidade')}>Localidade Atual</button>
+                <button onClick={() => navigate('/cadastroEndereco')}>Cadastrar Novo Endereço</button>
             </div>
         </div>
     )

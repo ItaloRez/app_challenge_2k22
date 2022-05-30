@@ -8,6 +8,7 @@
     padding: 97px 25px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 
     h1 {
         width: 325px;
@@ -28,9 +29,9 @@
     }
 
     img {
-        width: 250px;
-        height: 250px;
         justify-self: center;
         align-self: center;
+        width: 250px;
+        height: 250px;
     }
 }

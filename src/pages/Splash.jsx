@@ -14,7 +14,7 @@ export default function Splash() {
                     de internet da sua região
                 </h1>
 
-                <p>Com apenas alguns cliques você vai receber os melhores planos de internet da sua região.</p>
+                <p>Com apenas alguns cliques você vai receber os melhores planos de internet.</p>
 
                 <button onClick={() => navigate('/home')}>Buscar Agora</button>
             </div>

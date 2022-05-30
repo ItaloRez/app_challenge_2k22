@@ -1,0 +1,39 @@
+.container {
+    height: 100%;
+    width: 100%;
+
+    font-family: 'Inter';
+    font-style: normal;
+
+    .header {
+        background: #5CC6BA;
+        padding: 55px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        align-items: flex-start;
+
+        h1 {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #FFFFFF;
+        }
+    }
+
+    .filtro {
+        padding: 25px 25px 0 25px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+    }
+
+    .cards {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        padding-bottom: 30px;
+        padding: 25px;
+    }
+}
